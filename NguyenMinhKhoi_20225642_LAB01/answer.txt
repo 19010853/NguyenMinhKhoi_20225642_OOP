@@ -1,0 +1,249 @@
+Bài 2.2.5. Calculator: 
+
+Test case 1:
+
+Input: Số thứ nhất là 5, số thứ hai là 3
+Expected Output:
+Tổng: 8
+Hiệu: 2
+Tích: 15
+Thương: 1.6667
+
+Test case 2:
+
+Input: Số thứ nhất là 5, số thứ hai là 0
+Expected Output:
+Tổng: 5
+Hiệu: 5
+Tích: 0
+Thông báo: "The second number is 0, so the divide is not valid"
+
+Test case 3:
+Input: Số thứ nhất là 0, số thứ hai là 0
+Expected Output:
+Tổng: 0
+Hiệu: 0
+Tích: 0
+Thông báo: "The second number is 0, so the divide is not valid"
+
+Test case 4:
+Input: Số thứ nhất là abc, số thứ hai là 5
+Expected Output: Xảy ra lỗi NumberFormatException
+
+Bài 2.2.6. LinearEquation:
+
+Test case 1: 
+
+Input: a = 0, b = 0
+Expected Output: "The equation has infinite solutions"
+Test case 2: 
+
+Input: a = 0, b = 5
+Expected Output: "The equation has no solution"
+
+Test case 3: 
+
+Input: a = 2, b = 4
+Expected Output: "The equation has one solution: x = -2.0"
+
+Bài 6.1. ChoosingOptions:
+
+Test case 1:
+
+Input: Người dùng nhấn nút "Yes" trên hộp thoại xác nhận.
+Expected Output: Hộp thoại thông báo hiển thị "You've chosen: Yes".
+
+Test case 2:
+
+Input: Người dùng nhấn nút "No" trên hộp thoại xác nhận.
+Expected Output: Hộp thoại thông báo hiển thị "You've chosen: No".
+
+Test case 3:
+
+Input: Người dùng nhấn nút "Cancel" trên hộp thoại xác nhận.
+Expected Output: Hộp thoại thông báo hiển thị "You've chosen: No".
+Test case 4:
+
+Input: Người dùng đóng hộp thoại xác nhận bằng cách nhấn nút "X" ở góc trên bên phải.
+Expected Output: Hộp thoại thông báo hiển thị "You've chosen: No".
+
+Bài 6.2. InputFromKeyboard
+
+Expected Output:
+"What's your name?"
+Input: Nguyen Van A
+Expected Output:
+"How old are you?"
+Input: 25
+Expected Output:
+"How tall are you?"
+Input: 1.75
+Expected Output:
+"Mrs/Ms. Nguyen Van A, 25 years old. Your height is 1.75m."
+
+Bài 6.3. DisplayTriangle
+
+Test case 1: 
+
+Input: Give me the height of the triangle: 3
+Expected Output:
+  *
+ ***
+*****
+Test case 2:
+
+Input: Give me the height of the triangle: 1
+Expected Output:
+*
+
+Test case 3: 
+
+Input: Give me the height of the triangle: 0
+Expected Output:
+
+Test case 4:
+Input: Give me the height of the triangle: -3
+Expected Output:
+
+Bài 6.4. NumberOfDaysOfAMonth
+
+Test case 1: 
+
+Input:
+Tháng: "Jan"
+Năm: 2023
+Expected Output:
+"Enter a month: "
+"Enter the year: "
+"This month has 31 days"
+
+Test case 2: 
+
+Input:
+Tháng: "Apr"
+Năm: 2023
+Expected Output:
+"Enter a month: "
+"Enter the year: "
+"This month has 30 days"
+
+Test case 3: Nhập tháng 2 của năm nhuận
+
+Input:
+Tháng: "Feb"
+Năm: 2024 (năm nhuận)
+Expected Output:
+"Enter a month: "
+"Enter the year: "
+"This month has 29 days"
+
+Test case 4:
+Input:
+Tháng: "Feb"
+Năm: 2023 (năm không nhuận)
+Expected Output:
+"Enter a month: "
+"Enter the year: "
+"This month has 28 days"
+
+Bài 6.5. SortingArray
+
+Test case 1:
+
+Input:
+Số lượng phần tử: 5
+Các phần tử: 3, 1, 4, 1, 5
+Expected Output:
+Enter the number of elements: 
+Enter element 1: 3
+Enter element 2: 1
+Enter element 3: 4
+Enter element 4: 1
+Enter element 5: 5
+Original array: 
+3 1 4 1 5 
+Array after sorting: 
+1 1 3 4 5 
+
+Test case 2:
+
+Input:
+Số lượng phần tử: "abc" 
+Expected Output:
+"Enter the number of elements: "
+Lỗi InputMismatchException khi nhập số lượng phần tử.
+
+BÀi 6.6. MatrixAdding
+
+Test case 1:
+
+Input:
+Số hàng: 2
+Số cột: 2
+Số lượng ma trận: 2
+Ma trận 1:
+1 2
+3 4
+Ma trận 2:
+5 6
+7 8
+Expected Output:
+Enter the number of rows for the matrix: 
+Enter the number of columns for the matrix: 
+Enter the number of matrices to sum: 
+Enter the elements of matrix 1: 
+Element at position [1][1]: 1
+Element at position [1][2]: 2
+Element at position [2][1]: 3
+Element at position [2][2]: 4
+Enter the elements of matrix 2: 
+Element at position [1][1]: 5
+Element at position [1][2]: 6
+Element at position [2][1]: 7
+Element at position [2][2]: 8
+Sum of all matrices: 
+6 8 
+10 12 
+
+Test case 2:
+
+Input:
+Số hàng: 2
+Số cột: 2
+Số lượng ma trận: "abc" (nhập vào một chuỗi không phải số)
+Expected Output:
+"Enter the number of rows for the matrix: "
+"Enter the number of columns for the matrix: "
+"Enter the number of matrices to sum: "
+Lỗi InputMismatchException khi nhập số lượng ma trận.
+
+Test case 3:
+
+Input:
+Số hàng: 0
+Số cột: 0
+Số lượng ma trận: 3 (nhập vào một chuỗi không phải số)
+Expected Output:
+"Enter the number of rows for the matrix: "
+"Enter the number of columns for the matrix: "
+"Enter the number of matrices to sum: "
+"Sum of all matrices: "
+
+Test case 4:
+
+Input:
+Số hàng: 3
+Số cột: 3
+Số lượng ma trận: 0 (nhập vào một chuỗi không phải số)
+Expected Output:
+"Enter the number of rows for the matrix: "
+"Enter the number of columns for the matrix: "
+"Enter the number of matrices to sum: "
+Sum of all matrices:
+0 0 0
+0 0 0 
+0 0 0
+
+
+
+
