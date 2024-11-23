@@ -8,10 +8,13 @@ public class DigitalVideoDisc {
         private String director;
         private int length;
         private float cost;
+        private static int nbDigitalVideoDisc = 0; // Declared class attribute
+        private int id; //Instance attribute
 
         //Constructor by title
         public DigitalVideoDisc(String title) {
             this.title = title;
+            this.id = nbDigitalVideoDisc++;
         }
 
         //Constructor by category, title and cost
@@ -19,6 +22,7 @@ public class DigitalVideoDisc {
             this.title = title;
             this.category = category;
             this.cost = cost;
+            this.id = nbDigitalVideoDisc++;
         }
 
         //Constructor by title, category , director, cost
@@ -27,6 +31,7 @@ public class DigitalVideoDisc {
             this.category = category;
             this.director = director;
             this.cost = cost;
+            this.id = nbDigitalVideoDisc++;
         }
 
         // Constructor by all attributes
@@ -36,6 +41,7 @@ public class DigitalVideoDisc {
             this.director = director;
             this.length = length;
             this.cost = cost;
+            this.id = nbDigitalVideoDisc++;
         }
 
         //Getter
@@ -59,6 +65,7 @@ public class DigitalVideoDisc {
             return cost;
         }
 
+        public int getId() { return id; }
         //Setter
         public void setTitle(String title) {
             this.title = title;
