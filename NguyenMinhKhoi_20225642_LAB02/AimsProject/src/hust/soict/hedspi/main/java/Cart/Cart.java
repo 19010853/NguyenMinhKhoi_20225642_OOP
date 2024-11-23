@@ -10,7 +10,7 @@ public class Cart {
     //Number of ordered DVDs
     private int qtyOrdered;
 
-    //Function which add DVDs in the cart
+    //Function which add one DVD at a time in the cart
     public void addDigitalVideoDisc(DigitalVideoDisc disc)
     {
         if (qtyOrdered == MAX_NUMBER_ORDERED)
@@ -22,6 +22,38 @@ public class Cart {
             qtyOrdered++;
             itemsOrdered[qtyOrdered-1]=disc;
             System.out.println("The DVD " + '\"' +disc.getTitle() + '\"' + " has been successfully added!");
+        }
+    }
+
+    //Function which add multiples DVDs with the same name in the cart
+    public int addDigitalVideoDisc(DigitalVideoDisc[] dvdList){
+        int addingNumber = 0;
+        for (DigitalVideoDisc disc : dvdList){
+            if (qtyOrdered == MAX_NUMBER_ORDERED){
+                System.out.println("The cart is almost full");
+                break;
+            } else {
+                itemsOrdered[qtyOrdered - 1] = disc;
+                qtyOrdered++;
+                System.out.println("The DVD " + disc.getTitle() + " has been successfully added!");
+                addingNumber++;
+            }
+        }
+        return addingNumber;
+    }
+
+    //Function which add 2 DVDs with different names
+    public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2){
+        if (qtyOrdered + 1 >= MAX_NUMBER_ORDERED){
+            System.out.println("The cart is almost full");
+        } else {
+            itemsOrdered[qtyOrdered] = dvd1;
+            qtyOrdered++;
+            System.out.println("The DVD " + dvd1.getTitle() + " has been successfully added!");
+
+            itemsOrdered[qtyOrdered] = dvd2;
+            qtyOrdered++;
+            System.out.println("The DVD " + dvd2.getTitle() + " has been successfully added!");
         }
     }
 
