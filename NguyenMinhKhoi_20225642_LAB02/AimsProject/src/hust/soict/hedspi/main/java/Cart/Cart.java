@@ -87,4 +87,23 @@ public class Cart {
         }
         return sum;
     }
+
+    //Print funtion
+    public void Print(){
+        StringBuilder output = new StringBuilder();
+
+        output.append("***********************CART***********************\n");
+        output.append("Ordered Items:\n");
+        for (int i = 0; i < qtyOrdered; i++){
+            output.append(i+1 + String.format(". [%s] - [%s] - [%s] - [%d]: %.2f $\n",
+                    i,
+                    itemsOrdered[i].getTitle(),
+                    itemsOrdered[i].getCategory(),
+                    itemsOrdered[i].getDirector(),
+                    itemsOrdered[i].getLength(),
+                    itemsOrdered[i].getCost()
+                    ));
+        }
+        output.append("Total cost: ").append("[").append(totalCost()).append("]");
+    }
 }
