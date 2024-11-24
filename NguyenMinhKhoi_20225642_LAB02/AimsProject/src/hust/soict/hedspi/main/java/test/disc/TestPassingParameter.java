@@ -1,3 +1,5 @@
+package test.disc;
+
 import DVD.DigitalVideoDisc;
 
 public class TestPassingParameter {
