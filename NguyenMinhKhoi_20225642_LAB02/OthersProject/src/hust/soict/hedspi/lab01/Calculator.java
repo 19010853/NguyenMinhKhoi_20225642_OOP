@@ -1,6 +1,4 @@
-package LAB01_NguyenMinhKhoi;
-
-import javax.swing.*;
+import javax.swing.JOptionPane;
 
 public class Calculator {
     public static void main(String[] args) {
