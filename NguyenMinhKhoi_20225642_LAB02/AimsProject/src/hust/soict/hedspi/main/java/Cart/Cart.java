@@ -95,8 +95,8 @@ public class Cart {
         output.append("***********************CART***********************\n");
         output.append("Ordered Items:\n");
         for (int i = 0; i < qtyOrdered; i++){
-            output.append(i+1 + String.format(". [%s] - [%s] - [%s] - [%d]: %.2f $\n",
-                    i,
+            output.append(String.format("%d. [%s] - [%s] - [%s] - [%d]: %.2f $\n",
+                    i+1,
                     itemsOrdered[i].getTitle(),
                     itemsOrdered[i].getCategory(),
                     itemsOrdered[i].getDirector(),
@@ -105,5 +105,48 @@ public class Cart {
                     ));
         }
         output.append("Total cost: ").append("[").append(totalCost()).append("]");
+        System.out.println(output.toString());
+    }
+
+    //Function which search DVDs by ID
+    public void searchDVDsByID(int id){
+        if (id > qtyOrdered){
+            System.out.println("No DVD found!");
+        } else {
+            System.out.println("Result for ID " + itemsOrdered[id - 1].getId() + " :\n");
+            System.out.println(String.format("%d. [%s] - [%s] - [%s] - [%d]: %.2f $\n",
+                    itemsOrdered[id - 1].getId(),
+                    itemsOrdered[id - 1].getTitle(),
+                    itemsOrdered[id - 1].getCategory(),
+                    itemsOrdered[id - 1].getDirector(),
+                    itemsOrdered[id - 1].getLength(),
+                    itemsOrdered[id - 1].getCost()
+            ));
+        }
+    }
+
+    //Function which search DVDs by Title
+    public void searchDVDsByTitle(String Title){
+        StringBuilder output = new StringBuilder();
+        boolean rightTitle = false;
+        for (int i = 0; i < qtyOrdered; i++){
+            if (itemsOrdered[i].getTitle().equals(Title)){
+                output.append("Result for Title " + itemsOrdered[i].getTitle() + " :\n");
+                output.append(String.format("%d. [%s] - [%s] - [%s] - [%d]: %.2f $\n",
+                        itemsOrdered[i].getId(),
+                        itemsOrdered[i].getTitle(),
+                        itemsOrdered[i].getCategory(),
+                        itemsOrdered[i].getDirector(),
+                        itemsOrdered[i].getLength(),
+                        itemsOrdered[i].getCost()
+                ));
+                rightTitle = true;
+                break;
+            }
+        }
+        if (!rightTitle){
+            output.append("No DVD found!\n");
+        }
+        System.out.println(output.toString());
     }
 }

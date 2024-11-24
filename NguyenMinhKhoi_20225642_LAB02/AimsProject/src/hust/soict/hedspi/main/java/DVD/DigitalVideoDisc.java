@@ -14,7 +14,7 @@ public class DigitalVideoDisc {
         //Constructor by title
         public DigitalVideoDisc(String title) {
             this.title = title;
-            this.id = nbDigitalVideoDisc++;
+            this.id = ++nbDigitalVideoDisc;
         }
 
         //Constructor by category, title and cost
@@ -22,7 +22,7 @@ public class DigitalVideoDisc {
             this.title = title;
             this.category = category;
             this.cost = cost;
-            this.id = nbDigitalVideoDisc++;
+            this.id = ++nbDigitalVideoDisc;
         }
 
         //Constructor by title, category , director, cost
@@ -31,7 +31,7 @@ public class DigitalVideoDisc {
             this.category = category;
             this.director = director;
             this.cost = cost;
-            this.id = nbDigitalVideoDisc++;
+            this.id = ++nbDigitalVideoDisc;
         }
 
         // Constructor by all attributes
@@ -41,7 +41,7 @@ public class DigitalVideoDisc {
             this.director = director;
             this.length = length;
             this.cost = cost;
-            this.id = nbDigitalVideoDisc++;
+            this.id = ++nbDigitalVideoDisc;
         }
 
         //Getter
@@ -86,4 +86,6 @@ public class DigitalVideoDisc {
         public void setCost(float cost) {
             this.cost = cost;
         }
+
+        public void setId(int id) { this.id = id; }
     }
