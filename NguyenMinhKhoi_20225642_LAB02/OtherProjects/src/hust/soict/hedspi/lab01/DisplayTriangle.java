@@ -1,5 +1,3 @@
-package LAB01_NguyenMinhKhoi;
-
 import java.util.Scanner;
 
 public class DisplayTriangle {

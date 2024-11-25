@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="AdditionalModuleElements">
+    <content url="file://$MODULE_DIR$/../OtherProjects" dumb="true">
+      <sourceFolder url="file://$MODULE_DIR$/../OtherProjects/src/hust/soict/hedspi/garbage" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../OtherProjects/src/hust/soict/hedspi/garbage/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../OtherProjects/src/hust/soict/hedspi/garbage/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../OtherProjects/src/hust/soict/hedspi/lab01" isTestSource="false" />
+    </content>
+  </component>
+</module>
