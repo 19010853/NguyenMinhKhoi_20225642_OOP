@@ -25,7 +25,7 @@ public class Cart {
         }
     }
 
-    //Function which add multiples DVDs with the same name in the cart
+    //Function which add multiple DVDs with the same name in the cart
     public int addDigitalVideoDisc(DigitalVideoDisc[] dvdList){
         int addingNumber = 0;
         for (DigitalVideoDisc disc : dvdList){
@@ -88,7 +88,7 @@ public class Cart {
         return sum;
     }
 
-    //Print funtion
+    //Print function
     public void Print(){
         StringBuilder output = new StringBuilder();
 

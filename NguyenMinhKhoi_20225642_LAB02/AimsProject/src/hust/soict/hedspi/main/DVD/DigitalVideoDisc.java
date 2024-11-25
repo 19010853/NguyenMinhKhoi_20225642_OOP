@@ -1,7 +1,6 @@
 package DVD;
 
 public class DigitalVideoDisc {
-
         //Declare attributes
         private String title;
         private String category;

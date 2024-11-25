@@ -17,6 +17,7 @@ public class Aims {
         DigitalVideoDisc dvd4 = new DigitalVideoDisc("Cu Lao Xac Song", "Horror", 12.03f);
 
         System.out.println("Total cost is: " + Math.round(anOrder.totalCost() * 100.0) / 100.0);
+
         //Successfully remove dvd1
         anOrder.removeDigitalVideoDisc(dvd1);
         System.out.println("Total cost is: " + Math.round(anOrder.totalCost() * 100.0) / 100.0);
