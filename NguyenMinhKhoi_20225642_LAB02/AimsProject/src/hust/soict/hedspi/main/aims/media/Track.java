@@ -23,4 +23,9 @@ public class Track {
 
         System.out.println("DVD length: " + this.getLength());
     }
+
+    //Compare 2 tracks base on its titles and length' values
+    public boolean equals(Track trackCompare){
+        return (title.equals(trackCompare.getTitle()) && (length == trackCompare.getLength()));
+    }
 }
