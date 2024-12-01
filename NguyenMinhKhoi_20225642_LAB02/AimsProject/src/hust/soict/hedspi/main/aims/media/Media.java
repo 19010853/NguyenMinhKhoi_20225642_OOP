@@ -45,5 +45,7 @@ public abstract class Media {
         this.cost = cost;
     }
 
-
+    public boolean equals(Media mediaCompare){
+        return title.equals(mediaCompare.getTitle());
+    }
 }
