@@ -1,6 +1,6 @@
 package Store;
 
-import DVD.DigitalVideoDisc;
+import aims.media.DigitalVideoDisc;
 
 public class Store {
     private DigitalVideoDisc[] itemsInStore;

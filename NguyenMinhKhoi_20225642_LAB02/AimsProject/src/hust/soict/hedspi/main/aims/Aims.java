@@ -1,7 +1,7 @@
 package aims;
 
 import Cart.Cart;
-import DVD.DigitalVideoDisc;
+import aims.media.DigitalVideoDisc;
 
 public class Aims {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package Cart;
 
-import DVD.DigitalVideoDisc;
+import aims.media.DigitalVideoDisc;
 
 public class Cart {
     //Maximum order

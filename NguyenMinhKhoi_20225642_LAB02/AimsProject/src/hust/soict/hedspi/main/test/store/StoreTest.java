@@ -1,6 +1,6 @@
 package test.store;
 
-import DVD.DigitalVideoDisc;
+import aims.media.DigitalVideoDisc;
 import Store.Store;
 
 public class StoreTest {
