@@ -1,3 +1,12 @@
+1. Những lớp nào là tổng hợp (aggregate) của các lớp khác?
+Class CompactDisc có thể là tổng hợp của Track nếu nó chứa danh sách các đối tượng Track.
+Class Cart có thể là tổng hợp của Media nếu nó quản lý một danh sách các đối tượng Media.
+
+2. Nếu đối tượng truyền vào không phải là thể hiện của Media, thì điều gì sẽ xảy ra?
+Khi ghi đè equals(), cần kiểm tra xem tham số có phải là một instance của lớp Media
+hay không trước khi thực hiện phép so sánh. Nếu tham số không phải là một instance của Media,
+phương thức equals() nên trả về false.
+
 Trả lời câu hỏi của phần 12:
 1. Class nào cần implement interface Comparable ?
 Class Media nên triển khai interface Comparable vì đây là lớp cơ sở (base class) cho các loại
