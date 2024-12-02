@@ -1,16 +1,31 @@
 package aims.media;
 
+import aims.media.*;
+import java.util.*;
+
 public abstract class Media {
     private int id;
     private String title;
     private String category;
     private float cost;
 
+    public static final Comparator<Media> COMPARE_BY_COST_TITLE = new MediaComparatorByCostTitle();
+    public static final Comparator<Media> COMPARE_BY_TITLE_COST = new MediaComparatorByTitleCost();
+
     public Media(int id, String title, String category, float cost){
         this.id = id;
         this.title = title;
         this.category = category;
         this.cost = cost;
+    }
+
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName() +
+                ": [id= " + id +
+                ", title='" + title + '\'' +
+                ", category='" + category + '\'' +
+                ", cost= " + cost + " $]";
     }
 
     public int getId() {

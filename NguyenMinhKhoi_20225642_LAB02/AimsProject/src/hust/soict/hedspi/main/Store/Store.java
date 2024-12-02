@@ -7,25 +7,39 @@ import java.util.ArrayList;
 public class Store {
     private ArrayList<Media> itemsInStore = new ArrayList<Media>();
 
-    public void addMedia(Media item){
-        for (Media checkItem : itemsInStore){
-            if (item.equals(checkItem)){
-                System.out.println(item.getTitle() + " has already exist!");
-            } else {
-                itemsInStore.add(item);
-                System.out.println(item.getTitle() + " has succesfully added to the store!");
+    private boolean checkMedia(Media disc) {
+        for (Media item : itemsInStore) {
+            if (item.equals(disc)) {
+                return true;
             }
+        }
+        return false;
+    }
+
+    public Media findMedia(String title) {
+        for (Media item : itemsInStore) {
+            if (item.getTitle().equals(title)) {
+                return item;
+            }
+        }
+        return null;
+    }
+
+    public void addMedia(Media disc) {
+        if(!checkMedia(disc)) {
+            itemsInStore.add(disc);
+            System.out.println( disc.getTitle() + "'ve been added to the store !");
+        } else {
+            System.out.println( disc.getTitle() + "'s already exists in the store !");
         }
     }
 
-    public void removeMedia(Media item){
-        for (Media checkItem : itemsInStore){
-            if (!item.equals(checkItem)){
-                System.out.println(item.getTitle() + " is not on the store!");
-            } else {
-                itemsInStore.add(item);
-                System.out.println(item.getTitle() + " has succesfully removed to the store!");
-            }
+    public void removeMedia(Media disc) {
+        if(checkMedia(disc)) {
+            itemsInStore.remove(disc);
+            System.out.println( disc.getTitle() + "'ve been deleted from the store !");
+        } else {
+            System.out.println("There is no "+ disc.getTitle() + " in the store !");
         }
     }
 
@@ -36,5 +50,18 @@ public class Store {
 
     public void setItemsInStore(ArrayList<Media> itemsInStore) {
         this.itemsInStore = itemsInStore;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder string = new StringBuilder("\n**********STORE***************\nitems in the store: \n");
+        if(itemsInStore.isEmpty()) string.append("There is no dvd in the store !\n");
+        else {
+            for (Media item : itemsInStore) {
+                string.append(item.getTitle() + " - " + item.getCost() + " $\n");
+            }
+        }
+        string.append("*********************************\n");
+        return string.toString();
     }
 }

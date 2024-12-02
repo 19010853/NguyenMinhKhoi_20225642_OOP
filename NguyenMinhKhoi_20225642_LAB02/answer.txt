@@ -1,0 +1,19 @@
+Trả lời câu hỏi của phần 12:
+1. Class nào cần implement interface Comparable ?
+Class Media nên triển khai interface Comparable vì đây là lớp cơ sở (base class) cho các loại
+media khác như Book, DigitalVideoDisc, và CompactDisc.
+
+2. Cách implement phương thức compareTo() để phản ánh thứ tự cần thiết?
+Phương thức compareTo() được triển khai trong class Media xác định cách thức so sánh dựa trên
+giá trị được đem so sánh (title, Cost) của đối tượng được so sánh.
+
+3. Có thể có hai quy tắc sắp xếp nếu sử dụng interface Comparable được không?
+Không, do interface Comparable chỉ cho phép định nghĩa 1 quy tắc sắp xếp thông qua phương thức
+compareTo().
+Nếu cần nhiều quy tắc sắp xếp khác nhau, có thể dùng bổ sung tham số cho lớp Media hoặc vào các
+phương thức compareTo() khác nhau trong các lớp con.
+
+4. Giả sử DVD có quy tắc sắp xếp khác với các loại phương tiện khác, đó là theo tiêu đề, sau đó
+dần độ dài, sau đó là giá. Bạn sẽ sửa đổi mã của mình như thế nào để cho phép điều này?
+Có thể ghi đè (Override) phuong thức compareTo() trong lớp con DigitalVideoDisc để DVD có quy tắc
+sắp xếp riêng biệt
