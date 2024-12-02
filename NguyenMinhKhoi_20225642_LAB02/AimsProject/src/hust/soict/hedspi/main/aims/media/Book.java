@@ -41,5 +41,21 @@ public class Book extends Media {
         }
     }
 
+    @Override
+    public String toString() {
+        StringBuilder print = new StringBuilder("Book: " +
+                " [id=" + getId() +
+                ", title='" + getTitle() + '\'' +
+                ", category='" + getCategory() + '\'' +
+                ", authors: ");
+        for (String a : authors) {
+            print.append(a);
+            print.append(" ");
+        }
+        print.append(", cost: ");
+        print.append(getCost());
+        print.append("$]");
+        return print.toString();
 
+    }
 }
