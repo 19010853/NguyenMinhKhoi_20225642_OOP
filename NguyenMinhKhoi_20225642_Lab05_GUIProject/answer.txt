@@ -1,0 +1,2 @@
+Câu hỏi của phần 14:
+Nếu không xử lý các ngoại lệ trong phương thức play(), khi có lỗi xảy ra, chương trình sẽ gặp sự cố và có thể bị dừng hoặc không hoạt động đúng. Ngoại lệ sẽ không được bắt và chương trình sẽ dừng lại hoặc có hành vi không mong muốn. Việc không xử lý các ngoại lệ có thể khiến ứng dụng bị treo hoặc đóng đột ngột.
